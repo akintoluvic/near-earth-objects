@@ -1,5 +1,5 @@
 {
-  "name": "my-project",
+  "name": "near-earth-objects",
   "version": "1.0.0",
   "description": "Should always check if the planet will be hit",
   "main": "index.js",
@@ -11,7 +11,7 @@
   "browserslist": [
     "last 1 Chrome versions"
   ],
-  "author": "Remy Sharp (https://remysharp.com)",
+  "author": "Akintunde Victor (https://victora.dev)",
   "license": "MIT",
   "dependencies": {
     "date-fns": "^2.11.1",
