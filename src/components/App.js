@@ -8,10 +8,10 @@ function getDate(d = new Date()) {
   return d.toJSON().split('T')[0];
 }
 
-const fetchData = () =>
-  fetch(
-    `https://api.nasa.gov/neo/rest/v1/feed?start_date=${getDate()}&api_key=DEMO_KEY`
+const fetchData = () => fetch(
+    `https://api.nasa.gov/neo/rest/v1/feed?start_date=${getDate()}&api_key=wydHB7Vwy0Nsifo52e7AkpIfoiXFqDYaFGbMPKWG`
   ).then((res) => res.json());
+  
 
 export default function App() {
   const data = useAsync(fetchData, []);
@@ -28,6 +28,7 @@ export default function App() {
   }
 
   const day = getDate(addDays(new Date(), 1));
+
   const hazards = data.result.near_earth_objects[day].reduce((acc, curr) => {
     if (curr.is_potentially_hazardous_asteroid) {
       return acc + 1;
