@@ -9,10 +9,9 @@ function getDate(d = new Date()) {
 }
 
 const fetchData = () => fetch(
-    `https://api.nasa.gov/neo/rest/v1/feed?start_date=${getDate()}&api_key=wydHB7Vwy0Nsifo52e7AkpIfoiXFqDYaFGbMPKWG`
+    `https://api.nasa.gov/neo/rest/v1/feed?start_date=${getDate()}&api_key=${process.env.API_KEY}`
   ).then((res) => res.json());
   
-
 export default function App() {
   const data = useAsync(fetchData, []);
 
