@@ -27963,7 +27963,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 function getDate(d = new Date()) {
   return d.toJSON().split('T')[0];
 }
-const fetchData = () => fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${getDate()}&api_key=wydHB7Vwy0Nsifo52e7AkpIfoiXFqDYaFGbMPKWG`).then(res => res.json());
+const fetchData = () => fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${getDate()}&api_key=${"wydHB7Vwy0Nsifo52e7AkpIfoiXFqDYaFGbMPKWG"}`).then(res => res.json());
 function App() {
   const data = (0, _reactAsyncHook.useAsync)(fetchData, []);
   if (data.loading) {
@@ -28021,7 +28021,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59771" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62329" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
